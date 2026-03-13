@@ -1,0 +1,25 @@
+services:
+  http-server-service:
+    build: ./server
+    container_name: http-server-container
+    volumes:
+      - ./local_data:/data
+    ports:
+      - "8888:8888"
+    networks:
+      - http-server-net
+
+  http-client-service:
+    build: ./client
+    container_name: http-client-container
+    depends_on:
+      - http-server-service
+    stdin_open: true
+    tty: true
+    networks:
+      - http-server-net
+    profiles: ["tools"]
+
+networks:
+  http-server-net:
+    driver: bridge
