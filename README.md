@@ -8,7 +8,7 @@
 ### Files
 - src
   - client
-    - HTTPServer.java
+    - HTTPClient.java
     - Dockerfile
   - server
     - HTTPServer.java
@@ -46,7 +46,7 @@ Can execute HTTP requests to get, post, put, and delete file from the HTTP serve
 Client could start by running the following command :
 
 ```bash
-java client.HTTPClient.java --verb <GET|POST|PUT|DELETE> --data <payload> --host <host> --port <port>
+java HTTPClient.java --verb <GET|POST|PUT|DELETE> --data <payload> --host <host> --port <port>
 ```
 
 **Warning:** host and port are optional parameters. They are set to localhost and 8888 by default.
