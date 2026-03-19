@@ -6,15 +6,14 @@
 - **Docker / Docker Compose** if you want to run the server and client as services, no need of Java 25 installed because it's already embedded in the Docker images.
 
 ### Files
-- src
-  - client
-    - HTTPClient.java
-    - Dockerfile
-  - server
-    - HTTPServer.java
-    - Dockerfile
-  - docker-compose.yml
-  - README.md
+- client
+  - HTTPClient.java
+  - Dockerfile
+- server
+  - HTTPServer.java
+  - Dockerfile
+- docker-compose.yml
+- README.md
 
 ### HTTP Server
 
